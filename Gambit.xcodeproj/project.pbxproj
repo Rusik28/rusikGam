@@ -93,8 +93,8 @@
 		C0B1E51B27DB8A7000CD3A84 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C0B1E50A27DB89B700CD3A84 /* ViewController.swift */,
 				C0B1E52D27DBA6D200CD3A84 /* GambitTableViewController.swift */,
+				C0B1E50A27DB89B700CD3A84 /* ViewController.swift */,
 				C0B1E50C27DB89B700CD3A84 /* Main.storyboard */,
 			);
 			path = View;

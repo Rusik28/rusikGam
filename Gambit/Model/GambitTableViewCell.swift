@@ -9,7 +9,8 @@ import UIKit
 
 class GambitTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var ImageVIewOne: UIImageView!
+    
+    @IBOutlet weak var imageViewOne: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
@@ -43,21 +44,13 @@ class GambitTableViewCell: UITableViewCell {
         super.accessibilityDecrement()
     }
         
-        
-        
-        
-    
-
-    
-    
-    
     
     func set(object: Gambit) {
         self.nameLabel.text = object.name
-
         self.priceLabel.text = "\(object.price) ₽"
-//        self.imageViewOne.image = UIImage(named: )
+        self.imageViewOne.image = UIImage(named: object.image)
     }
     
 }
+
 

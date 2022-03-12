@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct Gambit {
+struct Gambit: Decodable {
     var id: Int
     var name: String
     var image: String
     var price: Int
     var oldPrice: Int
     var description: String
-    var isFavourite: Bool
-    var modificator: Bool
+//    var isFavourite: Bool
+//    var modificator: Bool
 }

@@ -10,14 +10,13 @@
         <!--Gambit-->
         <scene sceneID="0oV-NV-zDa">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Eze-Qg-eGv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="ok7-se-eJS" customClass="GambitTableViewController" customModule="Gambit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="WUW-kW-YqS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="148" id="OXn-gw-Q1r" customClass="GambitTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gambitCellOne" rowHeight="148" id="OXn-gw-Q1r" customClass="GambitTableViewCell">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="148"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OXn-gw-Q1r" id="b8m-RD-Zuo">
@@ -105,22 +104,29 @@
                                         </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="6mN-K6-PI4" secondAttribute="trailing" constant="35" id="BxY-MG-dXS"/>
                                         <constraint firstItem="mKO-48-RBR" firstAttribute="leading" secondItem="b8m-RD-Zuo" secondAttribute="leadingMargin" constant="168" id="CK9-vg-1r9"/>
                                         <constraint firstItem="auS-Y5-y1v" firstAttribute="leading" secondItem="b8m-RD-Zuo" secondAttribute="leadingMargin" constant="241" id="DA8-8s-3Nk"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="GKz-gE-rdS" secondAttribute="trailing" constant="35" id="E1C-UY-i4X"/>
                                         <constraint firstItem="GKz-gE-rdS" firstAttribute="top" secondItem="b8m-RD-Zuo" secondAttribute="top" constant="30" id="GAI-NB-8r0"/>
                                         <constraint firstItem="lTF-dU-amV" firstAttribute="top" secondItem="b8m-RD-Zuo" secondAttribute="top" id="JTB-QW-ldL"/>
                                         <constraint firstItem="GKz-gE-rdS" firstAttribute="leading" secondItem="b8m-RD-Zuo" secondAttribute="leading" constant="188" id="L1f-H5-8ZE"/>
                                         <constraint firstItem="lTF-dU-amV" firstAttribute="leading" secondItem="b8m-RD-Zuo" secondAttribute="leading" constant="16" id="QrF-L0-HVt"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="GKz-gE-rdS" secondAttribute="bottom" constant="46" id="XxD-gd-ch7"/>
                                         <constraint firstItem="auS-Y5-y1v" firstAttribute="top" secondItem="b8m-RD-Zuo" secondAttribute="topMargin" constant="88" id="bVH-op-RbA"/>
                                         <constraint firstItem="6mN-K6-PI4" firstAttribute="top" secondItem="b8m-RD-Zuo" secondAttribute="topMargin" constant="88" id="cOH-zQ-o1R"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="6mN-K6-PI4" secondAttribute="bottom" constant="6" id="dFs-Dq-0ar"/>
                                         <constraint firstItem="52b-Gy-Ic9" firstAttribute="leading" secondItem="b8m-RD-Zuo" secondAttribute="leadingMargin" constant="287" id="eiS-T8-7y0"/>
                                         <constraint firstItem="52b-Gy-Ic9" firstAttribute="top" secondItem="b8m-RD-Zuo" secondAttribute="topMargin" constant="97" id="hWb-jK-rtk"/>
                                         <constraint firstItem="6mN-K6-PI4" firstAttribute="leading" secondItem="b8m-RD-Zuo" secondAttribute="leadingMargin" constant="307" id="hih-Z5-V7R"/>
+                                        <constraint firstItem="6mN-K6-PI4" firstAttribute="leading" secondItem="52b-Gy-Ic9" secondAttribute="trailing" constant="13" id="ik1-71-JcE"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="mKO-48-RBR" secondAttribute="bottom" constant="6" id="oAU-gP-Vik"/>
+                                        <constraint firstItem="auS-Y5-y1v" firstAttribute="leading" secondItem="mKO-48-RBR" secondAttribute="trailing" constant="10" id="qHy-bE-pty"/>
                                         <constraint firstItem="mKO-48-RBR" firstAttribute="top" secondItem="b8m-RD-Zuo" secondAttribute="topMargin" constant="88" id="qSw-oi-aPE"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="ImageVIewOne" destination="lTF-dU-amV" id="DeM-Xn-7hY"/>
+                                    <outlet property="imageViewOne" destination="lTF-dU-amV" id="nfY-X4-4z5"/>
                                     <outlet property="nameLabel" destination="GKz-gE-rdS" id="YsG-AJ-yAy"/>
                                     <outlet property="numberLabel" destination="52b-Gy-Ic9" id="qlk-30-Nbr"/>
                                     <outlet property="priceLabel" destination="mKO-48-RBR" id="4QI-8O-AZp"/>
@@ -138,13 +144,13 @@
                         </userDefinedRuntimeAttributes>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eze-Qg-eGv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="400.00000000000006" y="200.89285714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cDk-bb-XTM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xrt-dd-5eI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="IBI-LV-4KT" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="beE-ki-3ju">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -158,6 +164,7 @@
                         <segue destination="ok7-se-eJS" kind="relationship" relationship="rootViewController" id="ed4-oN-jAd"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xrt-dd-5eI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-312" y="201"/>
         </scene>

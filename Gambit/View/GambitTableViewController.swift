@@ -10,18 +10,20 @@ import UIKit
 class GambitTableViewController: UITableViewController {
 
 
+    var network = Network()
     
+    var objects: [Gambit] = []
     
-    
-    
-    
+    override func viewDidLoad() {
+         super.viewDidLoad()
+         network.fetchEvents { products in
+            self.objects = products
+            self.tableView.reloadData()
+        } ifFailure: {
+            print("Ошибка")
+        }
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
     }
-    
-    
     
     // MARK: - Table view data source
     
@@ -32,24 +34,17 @@ class GambitTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     //   let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "GambitTableViewCell", for: indexPath) as? GambitTableViewCell else { return
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "gambitCellOne", for: indexPath) as? GambitTableViewCell else { return
             UITableViewCell()
         }
         cell.set(object: objects[indexPath.row])
         return cell
+        
     }
     
-    
-    
-    
-    
-    
-
 }
-
-
 
 
 
