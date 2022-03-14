@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import SwiftUI
 
 class GambitTableViewController: UITableViewController {
+    
 
-
+    
     var network = Network()
     
     var objects: [Gambit] = []
@@ -22,8 +24,11 @@ class GambitTableViewController: UITableViewController {
         } ifFailure: {
             print("Ошибка")
         }
-
+        
     }
+    
+    
+    
     
     // MARK: - Table view data source
     
@@ -44,8 +49,22 @@ class GambitTableViewController: UITableViewController {
         
     }
     
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let favourite = favouriteAction(at: indexPath)
+        return UISwipeActionsConfiguration(actions: [favourite])
+    }
+    
+    func favouriteAction(at indexPath: IndexPath) -> UIContextualAction {
+        var object = objects[indexPath.row]
+        let action = UIContextualAction(style: .normal, title: "") { (action, view, completion) in
+            object.isFavourite = !(object.isFavourite ?? true)
+            self.objects[indexPath.row] = object
+            completion(true)
+        }
+        action.backgroundColor = object.isFavourite ?? true ? .systemGray: .systemRed
+        action.image = UIImage(systemName:  "heart")
+        return action
+        
 }
 
-
-
-
+}
