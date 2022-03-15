@@ -9,7 +9,7 @@ import Foundation
 
 class Network {
     func fetchEvents(ifSuccess: @escaping ([Gambit]) -> Void, ifFailure: @escaping () -> Void) {
-            
+
                 AF
                 .request("https://api.gambit-app.ru/category/39?page=1", method: .get)
                 .validate()
@@ -21,8 +21,9 @@ class Network {
                          ifSuccess(result)
                     }
                     case .failure(_): ifFailure()
-                        
+
 }
 }
 }
 }
+

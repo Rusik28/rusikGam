@@ -14,9 +14,7 @@ struct Gambit: Decodable {
     var price: Int
     var oldPrice: Int
     var description: String
-    var isFavourite: Bool? 
+    var isFavourite: Bool?
 //    var modificator: Bool
 }
- 
-
 
