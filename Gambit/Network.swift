@@ -6,8 +6,11 @@
 //
 import Alamofire
 import Foundation
+import UIKit
+import SDWebImage
 
 class Network {
+    var delegate: PresentDelegate?
     func fetchEvents(ifSuccess: @escaping ([Gambit]) -> Void, ifFailure: @escaping () -> Void) {
 
                 AF
@@ -18,6 +21,7 @@ class Network {
                     case .success(_):
                     if let data = try? response.result.get() {
                     let result = try! JSONDecoder().decode([Gambit].self, from: data)
+                        self.delegate?.menu(menu: result)
                          ifSuccess(result)
                     }
                     case .failure(_): ifFailure()
@@ -25,5 +29,7 @@ class Network {
 }
 }
 }
+    func viewDelegate(delegate: GambitPresenterDelegate & UITableViewController) {
+        self.delegate = delegate
 }
-
+}

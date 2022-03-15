@@ -8,31 +8,35 @@
 import UIKit
 import SwiftUI
 
-class GambitTableViewController: UITableViewController {
-
-
-//    var sentData:String
-    var network = Network()
-    var objects: [Gambit] = []
-//    var imageURLs = [String]()
-
+class GambitTableViewController: UITableViewController, GambitPresenterDelegate {
+        var network = Network()
+        var objects: [Gambit] = []
+        var qqq = [Gambit]()
+    
+    
+    func menu(menu: [Gambit]) {
+        self.qqq = menu
+        DispatchQueue.main.async {
+        self.tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
-         super.viewDidLoad()
-         network.fetchEvents { products in
+        super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        network.viewDelegate(delegate: self)
+        network.fetchEvents { products in
             self.objects = products
             self.tableView.reloadData()
         } ifFailure: {
             print("Ошибка")
         }
     }
-//        imageURLs = ["https://api.gambit-app.ru/uploads/products/tsTqFAIa4r2GfQ7sBJgtRclzRlT9cUlW.png", "https://api.gambit-app.ru/uploads/products/QbBGFpiHk65ckoWT-SLT2-wzK25o3tNh.jpg", "https://api.gambit-app.ru/uploads/products/fzY_BNDilydwsTvz7it3bNtYnIfC77Uc.png"]
     
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//
-//    }
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        }
 
 
     // MARK: - Table view data source
@@ -40,24 +44,8 @@ class GambitTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return objects.count
-    }
+}
 
-
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "gambitCellOne", for: indexPath)
-//        let cell2: GambitTableViewCell = tableView.dequeueReusableCell(withIdentifier: "gambitCellOne") as! GambitTableViewCell
-//        let imagename = UIImage(named: imageURLs[indexPath.row])
-//        cell2.imageViewOne.image = imagename
-//
-
-
-//        let imageView = cell.viewWithTag(1) as! UIImageView
-//
-//          imageView.sd_setImage(with: URL(string: imageURLs[indexPath.row]))
-//
-//        return cell
-
-  
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     //        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
@@ -89,3 +77,5 @@ class GambitTableViewController: UITableViewController {
 }
 }
 
+//extension ViewController: UITableViewDelegate, UITableViewDataSource {
+//}

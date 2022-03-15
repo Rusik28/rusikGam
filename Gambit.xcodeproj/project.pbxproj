@@ -97,9 +97,9 @@
 			isa = PBXGroup;
 			children = (
 				C0B1E52D27DBA6D200CD3A84 /* GambitTableViewController.swift */,
-				C01D40EB27E0D2740019EA7F /* data.js */,
 				C0B1E50A27DB89B700CD3A84 /* ViewController.swift */,
 				C0B1E50C27DB89B700CD3A84 /* Main.storyboard */,
+				C01D40EB27E0D2740019EA7F /* data.js */,
 			);
 			path = View;
 			sourceTree = "<group>";
