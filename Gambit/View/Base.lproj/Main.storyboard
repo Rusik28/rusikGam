@@ -3,12 +3,11 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Gambit-->
+        <!--GAMBIT-->
         <scene sceneID="0oV-NV-zDa">
             <objects>
                 <tableViewController id="ok7-se-eJS" customClass="GambitTableViewController" customModule="Gambit" customModuleProvider="target" sceneMemberID="viewController">
@@ -77,9 +76,51 @@
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="clear:" destination="OXn-gw-Q1r" eventType="touchUpInside" id="ZrV-9y-xOM"/>
-                                                <segue destination="2SW-Zv-yYR" kind="show" id="L1d-2d-Q9f"/>
                                             </connections>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efe-lm-AE1">
+                                            <rect key="frame" x="360" y="66" width="32" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.91980725529999996" green="0.214985694" blue="0.84084210319999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="+">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="plusButton:" destination="OXn-gw-Q1r" eventType="touchUpInside" id="8Ur-8x-f4j"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWk-AW-7AU">
+                                            <rect key="frame" x="300" y="66" width="32" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.91980725529999996" green="0.214985694" blue="0.84084210319999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="–">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="minusLabel:" destination="OXn-gw-Q1r" eventType="touchUpInside" id="DNr-Au-9qe"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iv-O1-FPJ">
+                                            <rect key="frame" x="335" y="73" width="20" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="mKO-48-RBR" firstAttribute="leading" secondItem="b8m-RD-Zuo" secondAttribute="leadingMargin" constant="168" id="CK9-vg-1r9"/>
@@ -98,6 +139,7 @@
                                 <connections>
                                     <outlet property="imageViewOne" destination="lTF-dU-amV" id="0eV-ZW-jtc"/>
                                     <outlet property="nameLabel" destination="GKz-gE-rdS" id="YsG-AJ-yAy"/>
+                                    <outlet property="numberLabel" destination="5iv-O1-FPJ" id="dqE-Id-1BK"/>
                                     <outlet property="priceLabel" destination="mKO-48-RBR" id="4QI-8O-AZp"/>
                                 </connections>
                             </tableViewCell>
@@ -107,7 +149,7 @@
                             <outlet property="delegate" destination="ok7-se-eJS" id="4i7-BF-9Wo"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Gambit" id="O53-9Z-Qtq">
+                    <navigationItem key="navigationItem" title="GAMBIT" id="O53-9Z-Qtq">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                         </userDefinedRuntimeAttributes>
@@ -116,22 +158,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eze-Qg-eGv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="400.00000000000006" y="200.89285714285714"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="dWD-QU-NyO">
-            <objects>
-                <viewController id="2SW-Zv-yYR" customClass="ViewController" customModule="Gambit" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lWc-Og-uLn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="OxH-gy-foc"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="cJk-y8-CMt"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="E3F-KB-CNF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1087" y="201"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cDk-bb-XTM">

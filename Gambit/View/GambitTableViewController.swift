@@ -11,11 +11,11 @@ import SwiftUI
 class GambitTableViewController: UITableViewController, GambitPresenterDelegate {
         var network = Network()
         var objects: [Gambit] = []
-        var qqq = [Gambit]()
+        var foods = [Gambit]()
     
     
     func menu(menu: [Gambit]) {
-        self.qqq = menu
+        self.foods = menu
         DispatchQueue.main.async {
         self.tableView.reloadData()
         }
@@ -37,6 +37,7 @@ class GambitTableViewController: UITableViewController, GambitPresenterDelegate 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         }
+    
 
 
     // MARK: - Table view data source
@@ -51,9 +52,11 @@ class GambitTableViewController: UITableViewController, GambitPresenterDelegate 
 
 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "gambitCellOne", for: indexPath) as? GambitTableViewCell else { return
-            UITableViewCell()
+        UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: GambitTableViewCell.identifier) as! GambitTableViewCell
         }
         cell.set(object: objects[indexPath.row])
+ //      let food = foods[indexPath.row]
         return cell
         
     }
@@ -66,9 +69,9 @@ class GambitTableViewController: UITableViewController, GambitPresenterDelegate 
     func favouriteAction(at indexPath: IndexPath) -> UIContextualAction {
         var object = objects[indexPath.row]
         let action = UIContextualAction(style: .normal, title: "") { (action, view, completion) in
-            object.isFavourite = !(object.isFavourite ?? true)
-            self.objects[indexPath.row] = object
-            completion(true)
+        object.isFavourite = !(object.isFavourite ?? true)
+        self.objects[indexPath.row] = object
+        completion(true)
         }
         action.backgroundColor = object.isFavourite ?? true ? .systemGray: .systemRed
         action.image = UIImage(systemName:  "heart")
@@ -77,5 +80,3 @@ class GambitTableViewController: UITableViewController, GambitPresenterDelegate 
 }
 }
 
-//extension ViewController: UITableViewDelegate, UITableViewDataSource {
-//}
