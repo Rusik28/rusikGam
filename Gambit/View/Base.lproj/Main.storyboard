@@ -31,17 +31,17 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Паста «Лючия»" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKz-gE-rdS">
-                                            <rect key="frame" x="188" y="30" width="206" height="61"/>
+                                            <rect key="frame" x="188" y="30" width="206" height="20.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="171" id="clq-Tv-QXW"/>
-                                                <constraint firstAttribute="height" constant="61" id="gIw-eu-EN5"/>
+                                                <constraint firstAttribute="width" constant="206" id="0OS-AA-JHk"/>
+                                                <constraint firstAttribute="height" constant="20.5" id="ozs-P9-IXe"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="450 ₽" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKO-48-RBR">
-                                            <rect key="frame" x="188" y="99" width="63" height="32"/>
+                                            <rect key="frame" x="188" y="98.5" width="63" height="32"/>
                                             <color key="backgroundColor" systemColor="systemGray5Color"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="63" id="jTg-UT-bKZ"/>
@@ -57,13 +57,60 @@
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="xME-7p-xEe">
+                                            <rect key="frame" x="297" y="99.5" width="97" height="30"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWk-AW-7AU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                    <color key="backgroundColor" red="0.91980725529999996" green="0.214985694" blue="0.84084210319999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="FO4-wc-wcs"/>
+                                                        <constraint firstAttribute="height" constant="30" id="N93-dL-90J"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="–">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="minusOne:" destination="OXn-gw-Q1r" eventType="touchUpInside" id="uhT-zG-hKa"/>
+                                                        <action selector="plusOne:" destination="OXn-gw-Q1r" eventType="touchUpInside" id="6YC-zq-Lum"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iv-O1-FPJ">
+                                                    <rect key="frame" x="44" y="0.0" width="9" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efe-lm-AE1">
+                                                    <rect key="frame" x="67" y="0.0" width="30" height="30"/>
+                                                    <color key="backgroundColor" red="0.91980725529999996" green="0.214985694" blue="0.84084210319999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="egw-0G-cy2"/>
+                                                        <constraint firstAttribute="width" constant="30" id="k4V-SX-tyJ"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="+">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lQ-39-8eS">
-                                            <rect key="frame" x="296" y="99" width="98" height="32"/>
+                                            <rect key="frame" x="297" y="99.5" width="97" height="30"/>
                                             <color key="backgroundColor" red="0.91980725529999996" green="0.214985694" blue="0.84084210319999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="98" id="T7f-sI-Qmq"/>
-                                                <constraint firstAttribute="height" constant="32" id="WUN-0B-WRX"/>
-                                            </constraints>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="В корзину">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -75,71 +122,41 @@
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <action selector="clear:" destination="OXn-gw-Q1r" eventType="touchUpInside" id="ZrV-9y-xOM"/>
+                                                <action selector="plusMenu:" destination="OXn-gw-Q1r" eventType="touchUpInside" id="Cc0-Hu-yLs"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efe-lm-AE1">
-                                            <rect key="frame" x="360" y="66" width="32" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.91980725529999996" green="0.214985694" blue="0.84084210319999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" title="+">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="8"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="plusButton:" destination="OXn-gw-Q1r" eventType="touchUpInside" id="8Ur-8x-f4j"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWk-AW-7AU">
-                                            <rect key="frame" x="300" y="66" width="32" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.91980725529999996" green="0.214985694" blue="0.84084210319999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" title="–">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="8"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="minusLabel:" destination="OXn-gw-Q1r" eventType="touchUpInside" id="DNr-Au-9qe"/>
-                                            </connections>
-                                        </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iv-O1-FPJ">
-                                            <rect key="frame" x="335" y="73" width="20" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="mKO-48-RBR" firstAttribute="leading" secondItem="b8m-RD-Zuo" secondAttribute="leadingMargin" constant="168" id="CK9-vg-1r9"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="GKz-gE-rdS" secondAttribute="trailing" id="E1C-UY-i4X"/>
+                                        <constraint firstItem="1lQ-39-8eS" firstAttribute="height" secondItem="xME-7p-xEe" secondAttribute="height" id="Dbu-n7-HM7"/>
+                                        <constraint firstItem="xME-7p-xEe" firstAttribute="top" secondItem="GKz-gE-rdS" secondAttribute="bottom" constant="49" id="Drz-fb-TvJ"/>
                                         <constraint firstItem="GKz-gE-rdS" firstAttribute="top" secondItem="b8m-RD-Zuo" secondAttribute="top" constant="30" id="GAI-NB-8r0"/>
+                                        <constraint firstAttribute="bottom" secondItem="mKO-48-RBR" secondAttribute="bottom" constant="17.5" id="GBw-ms-YyB"/>
+                                        <constraint firstItem="mKO-48-RBR" firstAttribute="top" secondItem="GKz-gE-rdS" secondAttribute="bottom" constant="48" id="ItC-fD-NCK"/>
                                         <constraint firstItem="lTF-dU-amV" firstAttribute="top" secondItem="b8m-RD-Zuo" secondAttribute="top" id="JTB-QW-ldL"/>
-                                        <constraint firstItem="GKz-gE-rdS" firstAttribute="leading" secondItem="b8m-RD-Zuo" secondAttribute="leading" constant="188" id="L1f-H5-8ZE"/>
+                                        <constraint firstItem="1lQ-39-8eS" firstAttribute="trailing" secondItem="b8m-RD-Zuo" secondAttribute="trailingMargin" id="Jxm-y0-5Xt"/>
+                                        <constraint firstAttribute="bottom" secondItem="lTF-dU-amV" secondAttribute="bottom" id="NGy-tD-yx1"/>
+                                        <constraint firstItem="1lQ-39-8eS" firstAttribute="trailing" secondItem="xME-7p-xEe" secondAttribute="trailing" id="OIu-7y-M2m"/>
                                         <constraint firstItem="lTF-dU-amV" firstAttribute="leading" secondItem="b8m-RD-Zuo" secondAttribute="leading" constant="16" id="QrF-L0-HVt"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="GKz-gE-rdS" secondAttribute="bottom" constant="46" id="XxD-gd-ch7"/>
-                                        <constraint firstItem="1lQ-39-8eS" firstAttribute="leading" secondItem="b8m-RD-Zuo" secondAttribute="leadingMargin" constant="276" id="jpj-Di-7Cu"/>
-                                        <constraint firstItem="1lQ-39-8eS" firstAttribute="top" secondItem="b8m-RD-Zuo" secondAttribute="topMargin" constant="88" id="k99-9n-Qz7"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="mKO-48-RBR" secondAttribute="bottom" constant="6" id="oAU-gP-Vik"/>
-                                        <constraint firstItem="mKO-48-RBR" firstAttribute="top" secondItem="b8m-RD-Zuo" secondAttribute="topMargin" constant="88" id="qSw-oi-aPE"/>
+                                        <constraint firstItem="1lQ-39-8eS" firstAttribute="bottom" secondItem="xME-7p-xEe" secondAttribute="bottom" id="RhB-dv-wnK"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="xME-7p-xEe" secondAttribute="bottom" constant="7.5" id="Tvn-ke-Ufu"/>
+                                        <constraint firstItem="xME-7p-xEe" firstAttribute="leading" secondItem="mKO-48-RBR" secondAttribute="trailing" constant="46" id="Y1k-Yv-r51"/>
+                                        <constraint firstItem="GKz-gE-rdS" firstAttribute="leading" secondItem="lTF-dU-amV" secondAttribute="trailing" constant="24" id="a45-V2-ArG"/>
+                                        <constraint firstItem="GKz-gE-rdS" firstAttribute="trailing" secondItem="b8m-RD-Zuo" secondAttribute="trailingMargin" id="bD0-nA-R0L"/>
+                                        <constraint firstItem="1lQ-39-8eS" firstAttribute="leading" secondItem="mKO-48-RBR" secondAttribute="trailing" constant="46" id="c1j-Yf-C6u"/>
+                                        <constraint firstItem="xME-7p-xEe" firstAttribute="trailing" secondItem="b8m-RD-Zuo" secondAttribute="trailingMargin" id="mSh-DE-tvc"/>
+                                        <constraint firstItem="1lQ-39-8eS" firstAttribute="top" secondItem="b8m-RD-Zuo" secondAttribute="topMargin" constant="88.5" id="q0P-8G-93M"/>
+                                        <constraint firstItem="mKO-48-RBR" firstAttribute="leading" secondItem="lTF-dU-amV" secondAttribute="trailing" constant="24" id="rtS-4H-YHC"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="1lQ-39-8eS" secondAttribute="bottom" constant="7.5" id="ym1-lf-la6"/>
+                                        <constraint firstItem="1lQ-39-8eS" firstAttribute="width" secondItem="xME-7p-xEe" secondAttribute="width" id="z2b-rJ-nn4"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="imageViewOne" destination="lTF-dU-amV" id="0eV-ZW-jtc"/>
+                                    <outlet property="menuButton" destination="1lQ-39-8eS" id="gHU-QD-cCA"/>
+                                    <outlet property="minusButton" destination="fWk-AW-7AU" id="m4t-8G-NzI"/>
                                     <outlet property="nameLabel" destination="GKz-gE-rdS" id="YsG-AJ-yAy"/>
                                     <outlet property="numberLabel" destination="5iv-O1-FPJ" id="dqE-Id-1BK"/>
+                                    <outlet property="plusButton" destination="efe-lm-AE1" id="oGm-Pb-bYw"/>
                                     <outlet property="priceLabel" destination="mKO-48-RBR" id="4QI-8O-AZp"/>
                                 </connections>
                             </tableViewCell>
